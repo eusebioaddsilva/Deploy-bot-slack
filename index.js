@@ -15,7 +15,7 @@ async function request () {
   let data = deploy.data;
   const url = 'https://slack.com/api/chat.postMessage';
   return res =  axios.post(url, {
-    channel: '#geral',
+    channel: '#general',
     text: `${data.attachments[0].text}`,
     username: 'Should i deploy today ?'
   }, { headers: { authorization: `Bearer ${botToken}` } });
@@ -27,6 +27,6 @@ controller.spawn({
 }).startRTM();
 
 // Determine behaviour of the Slackbot
-controller.hears(['deploy', 'fazer release'], ['ambient', 'direct_mention', 'mention'], function (bot, message) {
+controller.hears(['deploy', 'release'], ['ambient', 'direct_mention', 'mention'], function (bot, message) {
   bot.reply(message, request());
 });
