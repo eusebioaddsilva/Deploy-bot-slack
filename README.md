@@ -1,4 +1,4 @@
-# Deploy-bot
+# Deploy-bot-slack
 A slack bot developed with node.js that tell's if you and your team should deploy today in your #general slack channel.
 
 ## Setup 
