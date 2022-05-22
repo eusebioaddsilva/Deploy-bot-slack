@@ -17,6 +17,9 @@
       "slackToken": "xoxb-3276168661776-3259038650694-MgeWl7Gyb8xiYWoraBWsLak9",
       "slackChannel": "general",
       "slackWebhook": "https://hooks.slack.com/services/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",
+      "onSuccessTemplate": {
+        "text": "A new version of $package_name with version $npm_package_version has been released at $repo_url!"
+      },
       "branchesConfig": [
         {
           "pattern": "lts/*",
