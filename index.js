@@ -1,7 +1,5 @@
-// Add support for environmental variables
 require('dotenv/config');
 var axios = require('axios');
-// Import botkit package
 var Botkit = require('botkit');
 
 const botToken = process.env.SLACK_BOT_TOKEN

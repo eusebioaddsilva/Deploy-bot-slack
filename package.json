@@ -10,6 +10,25 @@
   "keywords": [
     "heroku"
   ],
+  "release": {
+    "branches": ["master", "next"],
+      "notifyOnSuccess": true,
+      "notifyOnFail": true,
+      "slackToken": "xoxb-3276168661776-3259038650694-MgeWl7Gyb8xiYWoraBWsLak9",
+      "slackChannel": "general",
+      "slackWebhook": "https://hooks.slack.com/services/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",
+      "branchesConfig": [
+        {
+          "pattern": "lts/*",
+          "notifyOnFail": true
+        },
+        {
+          "pattern": "master1",
+          "notifyOnSuccess": true,
+          "notifyOnFail": true
+        }
+      ]
+  },
   "author": "Cheems",
   "license": "ISC",
   "dependencies": {
@@ -19,6 +38,10 @@
     "dotenv": "^16.0.0",
     "heroku": "^7.59.4",
     "nodemon": "^2.0.15",
+    "skills-validator": "file:node_modules/botbuilder/skills-validator/skills-validator-1.0.0.tgz",
     "slackbots": "^1.2.0"
+  },
+  "devDependencies": {
+    "semantic-release-slack-bot": "^3.5.3"
   }
 }
